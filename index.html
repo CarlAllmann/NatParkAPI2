@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>National Parks API</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+</head>
+<body>
+<div class="container">
+    <h1>Find a National Park in your State</h1>
+    <form id="js-form">
+        <label for="search-term">Enter one or more state abbreviations, <mark>separated by commas and NO spaces</mark>: </label>
+        <input type="text" name="search-term" id="js-search-term" required>
+        <br>
+        <Label for="max-results">Enter the number of results you would like returned. 
+        </Label>
+        <br>
+        <input type="number" name="max-results" id="js-max-results" value="10" alt="maximum results">
+        <input type="submit" value="Go!" alt="submit">
+        <p>*Please note there may be less than the requested number of parks in your state*</p>
+    </form>
+
+    <p id="js-error-message" class="error-message"></p>
+    <section id="results" class="hidden">
+        <h2>Search results:</h2>
+        <ul id="results-list">
+        </ul>
+        </section>
+
+</div>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+<script type="text/javascript" src="script.js"></script>    
+</body>
+</html>
